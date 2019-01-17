@@ -10,5 +10,12 @@ public class HelloController {
     public String index() {
         return "Greetings from Spring Boot!";
     }
+
+    @RequestMapping("/folder1")
+    public String folder1() {
+        return "Greetings from Spring folder1";
+    }
+
+
     
 }

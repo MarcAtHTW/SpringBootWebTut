@@ -28,4 +28,12 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
+    
+    @Test
+    public void getFolder1() throws Exception {
+	mvc.perform(MockMvcRequestBuilders.get("/folder1").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().string(equalTo("Greetings from Spring folder1")));
+
+    }
 }
